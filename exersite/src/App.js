@@ -1,4 +1,5 @@
 import './App.css';
+import ExerciseButton from './components/ExerciseButton';
 
 function App() {
   return (
@@ -10,12 +11,9 @@ function App() {
           <p>3</p>
         </div>
         <div id="button-container">
-          <button class="workout-button">
-            <div class="workout-name">Pushup</div>
-            <div class="counter"></div>
-          </button>
-          <button class="workout-button">Squat</button>
-          <button class="workout-button">Weightlift</button>
+          <ExerciseButton name="Pushup" initialCount="0" />
+          <ExerciseButton name="Squat" initialCount="0" />
+          <ExerciseButton name="Weightlift" initialCount="0" />
         </div>
       </header>
     </div>

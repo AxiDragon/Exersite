@@ -7,6 +7,17 @@
   pointer-events: none;
 }
 
+.ExerciseButton {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .App-header {
   min-height: 100vh;
   display: flex;
