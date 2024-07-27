@@ -37,3 +37,4 @@ I've been exercising decently but I have noticed that I can struggle a little wi
 - [ ] Song Suggestion
   - [ ] Song Input
   - [ ] Link Song
+- [ ] Favicon
