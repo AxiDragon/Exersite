@@ -1,6 +1,6 @@
-const lastTime = Number(localStorage.getItem("time")) || Date.now();
+const lastTime = Number(localStorage.getItem("time")) ?? Date.now();
 const msPerDay = 86400000;
-const resetTime = 0; //midnight
+const resetTime = 0; //midnight UTC
 
 checkTime();
 
@@ -18,10 +18,3 @@ function checkTime() {
 	}
 	return false;
 }
-
-//how to check if midnight has passed
-//midnight happens every 86400000 milliseconds, lets call this x
-//each day, Date().now() / x will be one greater than the previous day
-//we can just check if the difference between Date().now() / x and lastTime / x is greater than 1
-//if we want to check for a specific time, we can just subtract that time from the times
-//and then we can treat it like midnight still
