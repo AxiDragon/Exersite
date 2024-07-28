@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
-let points = 3;
+const dailyPoints = 3;
+let points = Number(localStorage.getItem("points")) ?? 3;
 
 dispatchPointsChange(); //initial dispatch
 
 export const getPoints = () => points;
 export const setPoints = newPoints => {
 	points = newPoints;
-
+	localStorage.setItem("points", points);
 	dispatchPointsChange();
 };
 
@@ -27,9 +28,9 @@ function ExerciseButton({ name, initialCount }) {
 	};
 
 	return (
-		<button class="ExerciseButton" onClick={handleClick}>
-			<div class="workout-name">{name}</div>
-			<div class="counter">{count}</div>
+		<button className="ExerciseButton" onClick={handleClick}>
+			<div className="workout-name">{name}</div>
+			<div className="counter">{count}</div>
 		</button>
 	);
 }
