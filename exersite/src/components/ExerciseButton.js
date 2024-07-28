@@ -4,6 +4,10 @@ const dailyPoints = 3;
 // localStorage.setItem("points", dailyPoints);
 let points = Number(localStorage.getItem("points")) ?? 3;
 
+window.addEventListener("newDay", () => {
+	setPoints(dailyPoints);
+});
+
 dispatchPointsChange(); //initial dispatch
 
 export const getPoints = () => points;

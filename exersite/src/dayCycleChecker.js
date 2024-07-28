@@ -2,6 +2,8 @@ const lastTime = Number(localStorage.getItem("time")) ?? Date.now();
 const msPerDay = 86400000;
 const resetTime = 0; //midnight UTC
 
+// window.dispatchEvent(new CustomEvent("newDay"));
+
 checkTime();
 
 function checkTime() {
@@ -11,7 +13,6 @@ function checkTime() {
 	console.log(lastDay);
 	console.log(currentDay);
 	if (currentDay - lastDay >= 1) {
-		alert("It's a new day!");
 		localStorage.setItem("time", Date.now());
 		window.dispatchEvent(new CustomEvent("newDay"));
 		return true;
