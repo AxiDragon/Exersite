@@ -3,7 +3,7 @@ import ExerciseButton from './components/ExerciseButton';
 import React, { useState } from 'react';
 
 function App() {
-  const [points, setPoints] = useState(3);
+  const [points, setPoints] = useState(Number(localStorage.getItem("points")) ?? 3);
 
   const handlePointsChange = (event) => {
     setPoints(event.detail);
@@ -24,6 +24,7 @@ function App() {
           <ExerciseButton name="Squat" initialCount="0" />
           <ExerciseButton name="Weightlift" initialCount="0" />
         </div>
+        <p>{(16 * 3600 + 43 * 60) * 1000}</p>
       </header>
     </div>
   );
