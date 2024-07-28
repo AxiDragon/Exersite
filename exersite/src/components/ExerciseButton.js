@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const dailyPoints = 3;
+// localStorage.setItem("points", dailyPoints);
 let points = Number(localStorage.getItem("points")) ?? 3;
 
 dispatchPointsChange(); //initial dispatch
