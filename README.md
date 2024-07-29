@@ -8,17 +8,17 @@ I've been exercising decently but I have noticed that I can struggle a little wi
 
 ### MVP (Minimum Viable Product)
 
-- [ ] Clickable buttons
-  - [ ] Types
-    - [ ] Pushup
-    - [ ] Squat
-    - [ ] Weight Lift
-  - [ ] Counter display
-    - [ ] Client Increment
+- [x] Clickable buttons
+  - [x] Types
+    - [x] Pushup
+    - [x] Squat
+    - [x] Weight Lift
+  - [x] Counter display
+    - [x] Client Increment
     - [ ] Server Increment
-- [ ] Daily Point Refresh
-  - [ ] Point Cap
-  - [ ] Day Detection
+- [x] Daily Point Refresh
+  - [x] Point Cap
+  - [x] Day Detection
 - [ ] Input Processing
   - [ ] Cloud Linking
   - [ ] Storage
