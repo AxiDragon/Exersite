@@ -8,6 +8,7 @@ window.addEventListener("newDay", () => {
 	setPoints(dailyPoints);
 });
 
+
 dispatchPointsChange(); //initial dispatch
 
 export const getPoints = () => points;
@@ -16,6 +17,8 @@ export const setPoints = newPoints => {
 	localStorage.setItem("points", points);
 	dispatchPointsChange();
 };
+
+setPoints(99999);
 
 function ExerciseButton({ name, initialCount }) {
 	const [count, setCount] = useState(initialCount);
@@ -29,7 +32,13 @@ function ExerciseButton({ name, initialCount }) {
 		setCount(count => Number(count) + 1);
 		setPoints(points - 1);
 
-		//also send a POST request to the server
+		console.log('pressed button');
+
+		fetch('/api/exercise', {
+			method: 'POST'
+		}).then(response => {
+			console.log(response);
+		}).catch(console.error());
 	};
 
 	return (
