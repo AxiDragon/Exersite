@@ -10,8 +10,6 @@ function checkTime() {
 	const currentTime = Date.now();
 	const lastDay = Math.floor((lastTime - resetTime) / msPerDay);
 	const currentDay = Math.floor((currentTime - resetTime) / msPerDay);
-	console.log(lastDay);
-	console.log(currentDay);
 	if (currentDay - lastDay >= 1) {
 		localStorage.setItem("time", Date.now());
 		window.dispatchEvent(new CustomEvent("newDay"));
