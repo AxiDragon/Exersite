@@ -38,6 +38,7 @@ function ExerciseButton({ name, initialCount }) {
 			method: 'POST'
 		}).then(response => {
 			console.log(response);
+			console.log('hi');
 		}).catch(console.error());
 	};
 
